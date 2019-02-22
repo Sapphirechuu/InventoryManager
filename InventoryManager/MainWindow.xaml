@@ -1,0 +1,28 @@
+﻿<Window x:Class="InventoryManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManager"
+        mc:Ignorable="d"
+        Title="Inventory Manager" Height="900" Width="850">
+    <Grid>
+        <ComboBox x:Name="RowBox" 
+                  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" 
+                  SelectionChanged="RowBox_SelectionChanged" 
+                  SelectedValuePath="Content">
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="Purple"/>
+        </ComboBox>
+        <ComboBox  x:Name="Test" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="Test2" HorizontalAlignment="Left" Margin="135,180,0,0" VerticalAlignment="Top" Width="120"/>
+        <Rectangle x:Name="_0x0" Fill="#FF575757" HorizontalAlignment="Left" Height="138" Margin="10,37,0,0" Stroke="Black" VerticalAlignment="Top" Width="120">
+            <Rectangle.OpacityMask>
+                <SolidColorBrush Color="#FC000000"/>
+            </Rectangle.OpacityMask>
+        </Rectangle>
+        <Rectangle x:Name="_0x1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="138" Margin="135,37,0,0" Stroke="Black" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
