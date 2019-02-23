@@ -18,11 +18,7 @@
         </ComboBox>
         <ComboBox  x:Name="Test" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="Test2" HorizontalAlignment="Left" Margin="135,180,0,0" VerticalAlignment="Top" Width="120"/>
-        <Rectangle x:Name="_0x0" Fill="#FF575757" HorizontalAlignment="Left" Height="138" Margin="10,37,0,0" Stroke="Black" VerticalAlignment="Top" Width="120">
-            <Rectangle.OpacityMask>
-                <SolidColorBrush Color="#FC000000"/>
-            </Rectangle.OpacityMask>
-        </Rectangle>
         <Rectangle x:Name="_0x1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="138" Margin="135,37,0,0" Stroke="Black" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="_0x0" HorizontalAlignment="Left" Height="138" Margin="10,37,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.267,0.423"/>
     </Grid>
 </Window>

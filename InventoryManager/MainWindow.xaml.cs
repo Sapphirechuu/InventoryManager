@@ -27,9 +27,9 @@ namespace InventoryManager
         {
             InitializeComponent();
 
-            options.Add("sdadasd");
-            options.Add("asaaaaaaaaaaaa");
-            options.Add("2");
+            options.Add("Deadpool");
+            options.Add("Hello Kitty");
+            options.Add("Storm");
 
             Test.ItemsSource = options;
             Test2.ItemsSource = options;
