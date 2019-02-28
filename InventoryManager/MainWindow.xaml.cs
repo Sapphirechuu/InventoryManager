@@ -31,19 +31,34 @@ namespace InventoryManager
             options.Add("Hello Kitty");
             options.Add("Storm");
 
-            Test.ItemsSource = options;
-            Test2.ItemsSource = options;
+            _0x0Box.ItemsSource = options;
+            _0x1Box.ItemsSource = options;
         }
 
-        private void RowBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //private void RowBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    String stringValue = RowBox.SelectedValue.ToString();
+        //    rowNum = int.Parse(stringValue);
+        //    if (rowNum == 2)
+        //    {
+        //        _0x0.Fill = Brushes.MediumPurple;
+        //        Console.WriteLine("Wat");
+        //    }
+        //}
+
+        private void PictureBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            String stringValue = RowBox.SelectedValue.ToString();
-            //rowNum = int.Parse(stringValue);
-            //if (rowNum == 2)
-            //{
-            //    _0x0.Fill = Brushes.MediumPurple;
-            //    Console.WriteLine("Wat");
-            //}
+            string temp = ((ComboBox)sender).Name;
+            temp = temp.Remove((temp.Length - 3), 3);
+            object wanted = FindName(temp);
+            BitmapImage bitmapImage = new BitmapImage();
+
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri(@"C:\Users\s189075\Downloads\" + ((ComboBox)sender).SelectedItem + ".jpg");
+
+            bitmapImage.EndInit();
+            ((Image)wanted).Source = bitmapImage;
+
         }
     }
 }

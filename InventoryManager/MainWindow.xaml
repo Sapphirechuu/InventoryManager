@@ -7,18 +7,28 @@
         mc:Ignorable="d"
         Title="Inventory Manager" Height="900" Width="850">
     <Grid>
-        <ComboBox x:Name="RowBox" 
+        <!--<ComboBox x:Name="RowBox" 
                   HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" 
                   SelectionChanged="RowBox_SelectionChanged" 
                   SelectedValuePath="Content">
             <ListBoxItem Content="1"/>
             <ListBoxItem Content="2"/>
             <ListBoxItem Content="3"/>
-            <ListBoxItem Content="Purple"/>
-        </ComboBox>
-        <ComboBox  x:Name="Test" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="Test2" HorizontalAlignment="Left" Margin="135,180,0,0" VerticalAlignment="Top" Width="120"/>
-        <Rectangle x:Name="_0x1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="138" Margin="135,37,0,0" Stroke="Black" VerticalAlignment="Top" Width="120"/>
+            <ListBoxItem Content="4"/>
+        </ComboBox>-->
+        <ComboBox  x:Name="_0x0Box" 
+                   HorizontalAlignment="Left" 
+                   Margin="10,180,0,0" 
+                   VerticalAlignment="Top" 
+                   Width="120"
+                   SelectionChanged="PictureBox_SelectionChanged"/>
+        <ComboBox x:Name="_0x1Box"
+                  HorizontalAlignment="Left" 
+                  Margin="135,180,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="120"
+                  SelectionChanged="PictureBox_SelectionChanged"/>
         <Image x:Name="_0x0" HorizontalAlignment="Left" Height="138" Margin="10,37,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.267,0.423"/>
+        <Image x:Name="_0x1" HorizontalAlignment="Left" Height="138" Margin="135,37,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

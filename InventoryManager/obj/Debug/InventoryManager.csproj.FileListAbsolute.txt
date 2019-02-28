@@ -13,3 +13,5 @@ C:\Users\s189075\source\repos\InventoryManager\InventoryManager\obj\Debug\Invent
 C:\Users\s189075\source\repos\InventoryManager\InventoryManager\obj\Debug\InventoryManager.csproj.CoreCompileInputs.cache
 C:\Users\s189075\source\repos\InventoryManager\InventoryManager\obj\Debug\InventoryManager.exe
 C:\Users\s189075\source\repos\InventoryManager\InventoryManager\obj\Debug\InventoryManager.pdb
+C:\Users\s189075\source\repos\InventoryManager\InventoryManager\bin\Debug\deadpool.jpg
+C:\Users\s189075\source\repos\InventoryManager\InventoryManager\obj\Debug\InventoryManager_Content.g.cs
