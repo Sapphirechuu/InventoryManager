@@ -23,14 +23,20 @@ namespace InventoryManager
     {
         private string boxName;
         private string item;
+        private string textName;
+        private string quantity;
 
         public string BoxName{ get => boxName; set => boxName = value; }
         public string Item { get => item; set => item = value; }
+        public string TextName { get => textName; set => textName = value; }
+        public string Quantity { get => quantity; set => quantity = value; }
 
-        public loadFile(string v1, string v2)
+        public loadFile(string v1, string v2, string v3, string v4)
         {
             BoxName = v1;
             Item = v2;
+            TextName = v3;
+            Quantity = v4;
         }
     }
 
@@ -117,17 +123,22 @@ namespace InventoryManager
             saveFileDialog.Filter = "Text files (*.txt;)|*.txt;|All files (*.*)|*.*";
             if (saveFileDialog.ShowDialog() == true)
             {
+                int i = -1;
                 using (StreamWriter sw = File.CreateText(saveFileDialog.FileName))
                 {
                     foreach (ComboBox combo in comboBoxes)
                     {
+                        i++;
+                        string temp;
+                        temp = "_0x" + i.ToString() + "Text";
+                        object tempOb = FindName(temp);
                         if (combo.SelectedItem != null)
                         {
-                            sw.WriteLine(combo.Name + "," + combo.SelectedItem.ToString());
+                            sw.WriteLine(combo.Name + "," + combo.SelectedItem.ToString() + "," + ((TextBox)tempOb).Name + "," + ((TextBox)tempOb).Text);
                         }
                         else
                         {
-                            sw.WriteLine(combo.Name + ",null");
+                            sw.WriteLine(combo.Name + ",null," + ((TextBox)tempOb).Name + "," + "0");
                         }
                     }
                 }
@@ -148,6 +159,11 @@ namespace InventoryManager
                     string temps;
                     temps = (temp[0]);
                     object tempOb = FindName(temps);
+
+                    string tempT;
+                    tempT = (temp[2]);
+                    object tempText = FindName(tempT);
+
                     if (temp[1] != "null")
                     {
                         ((ComboBox)tempOb).SelectedItem = temp[1];
@@ -156,6 +172,7 @@ namespace InventoryManager
                     {
                         ((ComboBox)tempOb).SelectedItem = null;
                     }
+                    ((TextBox)tempText).Text = temp[3];
                 }
             }
         }
